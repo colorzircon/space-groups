@@ -1,4 +1,4 @@
-import SpaceGroupsData from "./SpaceGroupData";
+import { SpaceGroupsData } from "./space-group-data";
 
 export class SpaceGroup {
 

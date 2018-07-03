@@ -7,7 +7,7 @@
 Crystallography: Space Groups list;
 
 ## Technical description:
-  * Typescript 2.1 (export typings)
+  * Typescript 2.9 (export typings)
   * Isomorphic (can be used with node & with browsers )
   * Compiled to UMD (can be used as CommonJS, AMD & direct module include syntax)
 

@@ -2,31 +2,29 @@ const path = require('path');
 
 module.exports = {
 
+    devtool:  'source-map',
+
     entry: {
-        'SpaceGroup': path.resolve(__dirname, '../src/SpaceGroup')
+        'space-goups': path.resolve(__dirname, '../src/space-groups.ts')
     },
 
     output: {
+        globalObject: 'typeof self !== \'undefined\' ? self : this',
         path: path.resolve(__dirname, '../dist'),
-        filename: "SpaceGroup.js",
         libraryTarget: 'umd',
-        library: 'spaceGroups',
+        library: 'space-goups',
         umdNamedDefine: true
     },
 
     module: {
-        loaders: [{
-            test: /\.js$/,
-            exclude: /(bower_components|node_modules)/,
-            loader: 'babel-loader',
-        }, {
-            test: /\.ts$/,
-            exclude: /(bower_components|node_modules)/,
+        rules: [{
+            test: /\.ts?$/,
+            exclude: /node_modules/,
             loader: 'awesome-typescript-loader'
-        }],
+        }]
     },
 
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts']
     }
 };

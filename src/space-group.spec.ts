@@ -1,4 +1,4 @@
-import { SpaceGroup } from "./SpaceGroup";
+import { SpaceGroup } from "./space-group";
 
 describe("SpaceGroups", () => {
     it("should export SpaceGroup class", () => {
